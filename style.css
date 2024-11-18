@@ -8,9 +8,11 @@ body {
     align-items: center;
     height: 100vh; /* Full screen height */
     margin: 0;
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex-direction: column;
-     /* Stacks elements vertically */
+    position:fixed;
+  /* Stacks elements vertically */
 }
 
 /* Universal reset for margin and padding */
@@ -109,7 +111,7 @@ h4 {
     .img-container img {
         width: 100%;  /* Adjust image to fill container */
         height: auto;
-        border-radius: 500px;  /* Maintain aspect ratio */
+        border-radius: 600px;  /* Maintain aspect ratio */
     }
 }
 
@@ -121,7 +123,7 @@ h4 {
     .img-container img {
         width: 100%;  /* Adjust image to fill container */
         height: auto; 
-        border-radius: 500px; /* Maintain aspect ratio */
+        border-radius: 600px; /* Maintain aspect ratio */
     }
 }
 
@@ -133,6 +135,6 @@ h4 {
     .img-container img {
         width: 100%;  /* Adjust image to fill container */
         height: auto;
-        border-radius: 500px;  /* Maintain aspect ratio */
+        border-radius: 600px;  /* Maintain aspect ratio */
     }
 }
