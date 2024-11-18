@@ -8,8 +8,9 @@ body {
     align-items: center;
     height: 100vh; /* Full screen height */
     margin: 0;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    flex-direction: column; /* Stacks elements vertically */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column;
+     /* Stacks elements vertically */
 }
 
 /* Universal reset for margin and padding */
@@ -26,8 +27,9 @@ h1 {
     margin-bottom: 20px;
     width: 100%; /* Full width to ensure it stays at the top */
 }
+
 h3 {
-    text-align: right;
+    text-align: center;
     font-size: 80px;
     margin-bottom: 20px;
     width: 100%; /* Full width to ensure it stays at the top */
@@ -35,7 +37,7 @@ h3 {
 
 /* Content Styles (h2) */
 h4 {
-    text-align: justify;
+    text-align: center;
     font-size: 100px;
     margin-top: 20px;
     padding: 10px;
@@ -62,82 +64,75 @@ h4 {
 /* Image Slideshow */
 .img-container {
     display: flex;
-    width: 100%;  /* 15x the width of the container to allow for 15 images */
+    width: 20%;  /* 15x the width of the container to allow for 15 images */
     animation: slide 15s infinite; /* Adjust the timing for a smoother, slower transition */
 }
 
 .img-container img {
-    width:50%; /* Display 1 image per 6.6667% width of the container */
-    object-fit: cover;
+    width: 20%; /* Make the images fill the width of the container */
+    object-fit: cover; /* Ensure the images cover the container area */
     flex-shrink: 0;
-    height: auto;
+    height: 100%; /* Make the image's height auto-adjust to maintain aspect ratio */
 }
 
 /* Keyframe Animation for Sliding */
 @keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    5% {
-        transform: translateX(0);
-    }
-    10% {
-        transform: translateX(-50%);
-    }
-    15% {
-        transform: translateX(-50%);
-    }
-    20% {
-        transform: translateX(-100%);
-    }
-    25% {
-        transform: translateX(-100%);
-    }
-    30% {
-        transform: translateX(-150%);
-    }
-    35% {
-        transform: translateX(-150%);
-    }
-    40% {
-        transform: translateX(-200%);
-    }
-    45% {
-        transform: translateX(-200%);
-    }
-    50% {
-        transform: translateX(-250%);
-    }
-    55% {
-        transform: translateX(-250%);
-    }
-    60% {
-        transform: translateX(-300%);
-    }
-    65% {
-        transform: translateX(-300%);
-    }
-    70% {
-        transform: translateX(-350%);
-    }
-    75% {
-        transform: translateX(-350%);
-    }
-    80% {
-        transform: translateX(-400%);
-    }
-    85% {
-        transform: translateX(-400%);
-    }
-    90% {
-        transform: translateX(-450%);
-    }
-    95% {
-        transform: translateX(-450%);
-    }
-    100% {
-        transform: translateX(-500%);
+    0% { transform: translateX(0); }
+    5% { transform: translateX(0); }
+    10% { transform: translateX(-50%); }
+    15% { transform: translateX(-50%); }
+    20% { transform: translateX(-100%); }
+    25% { transform: translateX(-100%); }
+    30% { transform: translateX(-150%); }
+    35% { transform: translateX(-150%); }
+    40% { transform: translateX(-200%); }
+    45% { transform: translateX(-200%); }
+    50% { transform: translateX(-250%); }
+    55% { transform: translateX(-250%); }
+    60% { transform: translateX(-300%); }
+    65% { transform: translateX(-300%); }
+    70% { transform: translateX(-350%); }
+    75% { transform: translateX(-350%); }
+    80% { transform: translateX(-400%); }
+    85% { transform: translateX(-400%); }
+    90% { transform: translateX(-450%); }
+    95% { transform: translateX(-450%); }
+    100% { transform: translateX(-500%); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 { font-size: 90px; }
+    h3 { font-size: 50px; }
+    h4 { font-size: 60px; }
+    .container { width: 100%;  }
+    .img-container img {
+        width: 100%;  /* Adjust image to fill container */
+        height: auto;
+        border-radius: 500px;  /* Maintain aspect ratio */
     }
 }
 
+@media (max-width: 768px) {
+    h1 { font-size: 45px; }
+    h3 { font-size: 35px; }
+    h4 { font-size: 30px; }
+    .container { width: 100%; }
+    .img-container img {
+        width: 100%;  /* Adjust image to fill container */
+        height: auto; 
+        border-radius: 500px; /* Maintain aspect ratio */
+    }
+}
 
+@media (max-width: 576px) {
+    h1 { font-size: 35px; }
+    h3 { font-size: 15px; }
+    h4 { font-size: 20px; }
+    .container { width: 100%; }
+    .img-container img {
+        width: 100%;  /* Adjust image to fill container */
+        height: auto;
+        border-radius: 500px;  /* Maintain aspect ratio */
+    }
+}
