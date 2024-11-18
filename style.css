@@ -1,0 +1,143 @@
+/* Body and Background */
+body {
+    background-image: url("./b.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column; /* Stacks elements vertically */
+}
+
+/* Universal reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    font-size: 150px;
+    margin-bottom: 20px;
+    width: 100%; /* Full width to ensure it stays at the top */
+}
+h3 {
+    text-align: right;
+    font-size: 80px;
+    margin-bottom: 20px;
+    width: 100%; /* Full width to ensure it stays at the top */
+}
+
+/* Content Styles (h2) */
+h4 {
+    text-align: justify;
+    font-size: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    max-width: 80%;
+    margin: 20px auto;
+    width: 100%; /* Full width to ensure it stays at the bottom */
+}
+
+/* Image Slideshow Container */
+.container {
+    position: relative;
+    height: auto; 
+    overflow: hidden;
+    width: 80vmin;
+    display: flex;
+    justify-content: center; /* Horizontally centers the images */
+    align-items: center;     /* Vertically center images if needed */
+    margin-top: auto;        /* Pushes container towards bottom */
+    margin-bottom: auto;     /* Pushes container towards top */
+    border-radius: 600px;
+    box-shadow: 10px 25px 30px rgba(30, 30, 200, 0.3);
+}
+
+/* Image Slideshow */
+.img-container {
+    display: flex;
+    width: 100%;  /* 15x the width of the container to allow for 15 images */
+    animation: slide 15s infinite; /* Adjust the timing for a smoother, slower transition */
+}
+
+.img-container img {
+    width:50%; /* Display 1 image per 6.6667% width of the container */
+    object-fit: cover;
+    flex-shrink: 0;
+    height: auto;
+}
+
+/* Keyframe Animation for Sliding */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    5% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-50%);
+    }
+    15% {
+        transform: translateX(-50%);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    30% {
+        transform: translateX(-150%);
+    }
+    35% {
+        transform: translateX(-150%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    45% {
+        transform: translateX(-200%);
+    }
+    50% {
+        transform: translateX(-250%);
+    }
+    55% {
+        transform: translateX(-250%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    65% {
+        transform: translateX(-300%);
+    }
+    70% {
+        transform: translateX(-350%);
+    }
+    75% {
+        transform: translateX(-350%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    85% {
+        transform: translateX(-400%);
+    }
+    90% {
+        transform: translateX(-450%);
+    }
+    95% {
+        transform: translateX(-450%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+
